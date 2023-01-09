@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="mx-auto max-w-screen-xl">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
-              <a className="text-teal-600 flex" href="/">
+              <a className="text-teal-600 flex" href="#">
                 <svg
                   className="h-8"
                   viewBox="0 0 28 24"
