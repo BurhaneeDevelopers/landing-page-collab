@@ -59,7 +59,7 @@ const Navbar = () => {
                   <li>
                     <a
                       className="text-gray-500 transition hover:text-gray-800 text-xl"
-                      href="/"
+                      href="#"
                     >
                       About
                     </a>
@@ -68,7 +68,7 @@ const Navbar = () => {
                   <li>
                     <a
                       className="text-gray-500 transition hover:text-gray-800 text-xl"
-                      href="/"
+                      href="#"
                     >
                       Services
                     </a>
@@ -77,7 +77,7 @@ const Navbar = () => {
                   <li>
                     <a
                       className="text-gray-500 transition hover:text-gray-800 text-xl"
-                      href="/"
+                      href="#"
                     >
                       Gallery
                     </a>
@@ -86,7 +86,7 @@ const Navbar = () => {
                   <li>
                     <a
                       className="text-gray-500 transition hover:text-gray-800 text-xl"
-                      href="/"
+                      href="#"
                     >
                       Contact
                     </a>
