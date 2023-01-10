@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,17 +11,21 @@ export default function Home() {
       </Head>
 
       <section className="text-gray-600 body-font">
-        <div className="container py-24 mx-auto">
-          <div className="px-10 flex flex-col sm:flex-row sm:items-center items-start justify-around mx-auto">
-            <h1 className="sm:pr-7 text-2xl xl:text-7xl font-medium title-font text-gray-900">
-              Build your <br /> <span className="font-extrabold">Dream House</span> into reality !
+        <div className="container py-12 mx-auto">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center items-start justify-around">
+            <h1 className="text-xl xl:text-6xl font-medium title-font text-gray-900">
+              Build your <br />
+              <span className="font-extrabold">Dream House</span> into reality !
             </h1>
-            <p className="w-1/3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              quibusdam maxime maiores, impedit eaque animi nemo, quod veritatis
-              at minus magni earum fuga. Voluptatem tempora voluptas quaerat,
-              nihil non ullam.
+            <p className="w-1/3 p-16">
+              Auctor neque vitae tempus quam pellentesque nec nam aliquam sem et
+              tortor consequat id porta.
             </p>
+          </div>
+          <div className="image relative">
+            <div className="top-0 curve w-full h-10 bg-white absolute rounded-[0%_0%_50%_50%]"></div>
+            <img src="/heroImg.jpg" className="w-full h-96 object-cover" />
+            <div className="bottom-0 curve w-full h-10 bg-white absolute rounded-[50%_50%_0%_0%]"></div>
           </div>
         </div>
       </section>
