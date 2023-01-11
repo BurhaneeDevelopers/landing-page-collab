@@ -5,6 +5,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
     extend: {
@@ -23,6 +24,7 @@ module.exports = {
     },
   },
   plugins: [
+    require("tw-elements/dist/plugin"),
     function ({ addBase, theme }) {
       function extractColorVars(colorObj, colorGroup = "") {
         return Object.keys(colorObj).reduce((vars, colorKey) => {
@@ -36,7 +38,6 @@ module.exports = {
           return { ...vars, ...newVars };
         }, {});
       }
-
       addBase({
         ":root": extractColorVars(theme("colors")),
       });
