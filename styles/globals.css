@@ -9,7 +9,7 @@
 
 ::-webkit-scrollbar {
   width: 5px;
-  background-color: #eee;
+  background-color: rgb(209, 207, 207);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -47,3 +47,11 @@
   );
 
 } */
+
+.body {
+  background-image: url("/patterns.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}

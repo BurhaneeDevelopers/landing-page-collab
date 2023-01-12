@@ -15,12 +15,12 @@ export default function Home() {
         <section className="text-gray-600 body-font w-full">
           <div className="py-12 w-full flex flex-col m-0">
             <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center items-start justify-around space-y-4">
-              <h1 className="text-3xl xl:text-4xl font-medium title-font text-gray-900">
+              <h1 className="text-3xl xl:text-6xl font-medium title-font text-gray-900">
                 Build your <br />
                 <span className="font-extrabold">Dream House</span> into reality
                 !
               </h1>
-              <p className="sm:w-1/3  text-xl">
+              <p className="sm:w-1/3 text-xl md:text-2xl">
                 Auctor neque vitae tempus quam pellentesque nec nam aliquam sem
                 et tortor consequat id porta.
               </p>
