@@ -8,39 +8,40 @@ const Navbar = () => {
     <>
       {/* ---- TOP NAV---- */}
       <nav className="bg-gray-100 border-b mb-2">
-        <div className="container flex items-center justify-center p-3 gap-4 mx-auto text-gray-900 capitalize">
+        <div className="container flex flex-col sm:flex-row items-center justify-center p-3 gap-4 mx-auto text-gray-900 capitalize">
           <a
             href="#"
-            className="text-gray-800 transition-colors duration-300 transform flex"
+            className="border-b-2 border-transparent transition-colors duration-300 transform hover:text-gray-600  flex"
           >
-            <HiLocationMarker className="my-auto mx-3 text-indigo-600" /> Lorem, ipsum.
+            <HiLocationMarker className="my-auto mx-3 text-blue-600" /> Lorem,
+            ipsum.
           </a>
-
           <a
             href="#"
-            className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform hover:border-blue-500 flex"
+            className="border-b-2 border-transparent transition-colors duration-300 transform hover:text-gray-600  flex"
           >
-            <MdEmail className="my-auto mx-3 text-indigo-600" /> example@example.com
+            <MdEmail className="my-auto mx-3 text-blue-600" />{" "}
+            example@example.com
           </a>
-
           <a
             href="#"
-            className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform hover:border-blue-500 flex"
+            className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform flex"
           >
-            <BsFillTelephoneFill className="my-auto mx-3 text-indigo-600" /> 0987654321
+            <BsFillTelephoneFill className="my-auto mx-3 text-blue-600" />{" "}
+            0987654321
           </a>
         </div>
       </nav>
       {/* ---- BOTTOM NAV---- */}
 
-      <header aria-label="Site Header" className="bg-white">
-        <div className="mx-auto max-w-screen-xl">
+      <header aria-label="Site Header" className="bg-white px-10">
+        <div className="xl:mx-auto max-w-screen-xl">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <a className="text-teal-600 flex" href="#">
                 <svg
                   id="logo-54"
-                  width="200"
+                  width="150"
                   viewBox="0 0 170 41"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +106,7 @@ const Navbar = () => {
                 <ul className="flex items-center gap-6 text-sm">
                   <li>
                     <a
-                      className="text-gray-500 transition hover:text-gray-800 text-2xl"
+                      className="text-gray-500 transition hover:text-gray-800 text-lg"
                       href="#"
                     >
                       About
@@ -114,7 +115,7 @@ const Navbar = () => {
 
                   <li>
                     <a
-                      className="text-gray-500 transition hover:text-gray-800 text-2xl"
+                      className="text-gray-500 transition hover:text-gray-800 text-lg"
                       href="#"
                     >
                       Services
@@ -123,7 +124,7 @@ const Navbar = () => {
 
                   <li>
                     <a
-                      className="text-gray-500 transition hover:text-gray-800 text-2xl"
+                      className="text-gray-500 transition hover:text-gray-800 text-lg"
                       href="#"
                     >
                       Gallery
@@ -132,7 +133,7 @@ const Navbar = () => {
 
                   <li>
                     <a
-                      className="text-gray-500 transition hover:text-gray-800 text-2xl"
+                      className="text-gray-500 transition hover:text-gray-800 text-lg"
                       href="#"
                     >
                       Contact
