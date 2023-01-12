@@ -45,8 +45,8 @@ export default function Home() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
               </p>
             </div>
-            <div className="flex items-center justify-center py-10">
-              <div className="flex flex-col rounded-lg px-4 py-8 text-center mx-5">
+            <div className="flex items-center justify-center py-10 flex-col sm:flex-row">
+              <div className="flex flex-col px-4 py-8 text-center mx-5">
                 <dt className="order-last text-lg font-medium text-gray-500">
                   Projects
                 </dt>
@@ -55,7 +55,7 @@ export default function Home() {
                   500+
                 </dd>
               </div>
-              <div className="flex flex-col rounded-lg px-4 py-8 text-center mx-5">
+              <div className="flex flex-col px-4 py-8 text-center mx-5">
                 <dt className="order-last text-lg font-medium text-gray-500">
                   Customers
                 </dt>
@@ -64,7 +64,7 @@ export default function Home() {
                   23k+
                 </dd>
               </div>
-              <div className="flex flex-col rounded-lg px-4 py-8 text-center mx-5">
+              <div className="flex flex-col px-4 py-8 text-center mx-5">
                 <dt className="order-last text-lg font-medium text-gray-500">
                   Reviews
                 </dt>
@@ -233,7 +233,7 @@ export default function Home() {
         <section className="my-10 mb-24">
           <div className="flex my-10 flex-col text-center">
             <h2 className="text-5xl font-bold text-gray-900">
-              Find the answers you need !
+              Find the answers you need!
             </h2>
             <div className="mt-3">
               <span className="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
@@ -309,7 +309,7 @@ export default function Home() {
         {/* ----FAQ's---- */}
         {/* Email contact stuff blah blah blha */}
         <div className="bg-gray-200 py-24 px-8 rounded-2xl mb-20 md:flex md:-mx-3 md:items-center md:justify-between">
-          <h3 className="text-3xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-5xl w-1/3">
+          <h3 className="text-3xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-5xl sm:w-1/3">
             Want to build a big building ?
           </h3>
           <div className="mt-6 shrink-0 md:mt-0 md:w-auto md:mx-10">
