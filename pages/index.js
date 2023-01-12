@@ -35,10 +35,10 @@ export default function Home() {
           </div>
         </section>
         {/* ----Statistics---- */}
-        <section>
+        <section id="about">
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="flex flex-col justify-center">
-              <h2 className="text-6xl text-gray-900 font-bold">
+            <div className="flex flex-col justify-center text-center items-center md:items-start md:text-start">
+              <h2 className="text-5xl md:text-6xl text-gray-900 font-bold">
                 Trusted Quality
               </h2>
               <p className="w-1/2 text-xl mt-5 text-gray-600">
@@ -78,7 +78,7 @@ export default function Home() {
         </section>
         {/* ----Statistics---- */}
         {/* ----SkillSets---- */}
-        <section>
+        <section className="" id="services">
           <div className="mx-auto py-16">
             <div className="grid grid-cols-1 lg:h-screen max-h-[60rem] lg:grid-cols-2">
               <div className="relative z-10 lg:py-16">
@@ -118,7 +118,7 @@ export default function Home() {
         {/* ----SkillSets---- */}
 
         {/* ----Projects---- */}
-        <section className="mb-24">
+        <section className="mb-24" id="gallery">
           <div className="flex my-10 flex-col text-center">
             <h2 className="text-5xl text-gray-900 font-bold">
               The last big project we worked on
@@ -307,31 +307,35 @@ export default function Home() {
           </div>
         </section>
         {/* ----FAQ's---- */}
-        {/* Email contact stuff blah blah blha */}
-        <div className="bg-gray-200 py-24 px-8 rounded-2xl mb-20 md:flex md:-mx-3 md:items-center md:justify-between">
-          <h3 className="text-3xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-5xl sm:w-1/3">
-            Want to build a big building ?
-          </h3>
-          <div className="mt-6 shrink-0 md:mt-0 md:w-auto md:mx-10">
-            <div>
-              <label htmlFor="email" className="sr-only">
-                Email
-              </label>
 
-              <div className="relative">
-                <input
-                  type="email"
-                  className="w-full border-b border-gray-400 outline-none md:w-96 p-2 pr-12 bg-transparent text-gray-900"
-                  placeholder="john@doe.com"
-                />
+        {/* ----Contact---- */}
+        <section id="contact">
+          <div className="bg-gray-200 py-24 px-8 rounded-2xl mb-20 md:flex md:-mx-3 md:items-center md:justify-between">
+            <h3 className="text-3xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-5xl sm:w-1/3">
+              Want to build a big building ?
+            </h3>
+            <div className="mt-6 shrink-0 md:mt-0 md:w-auto md:mx-10">
+              <div>
+                <label htmlFor="email" className="sr-only">
+                  Email
+                </label>
 
-                <span className="absolute inset-y-0 right-4 inline-flex items-center">
-                  <HiOutlineMail className="text-xl text-gray-900" />
-                </span>
+                <div className="relative">
+                  <input
+                    type="email"
+                    className="w-full border-b border-gray-400 outline-none md:w-96 p-2 pr-12 bg-transparent text-gray-900"
+                    placeholder="john@doe.com"
+                  />
+
+                  <span className="absolute inset-y-0 right-4 inline-flex items-center">
+                    <HiOutlineMail className="text-xl text-gray-900" />
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        {/* ----Contact---- */}
       </main>
     </div>
   );

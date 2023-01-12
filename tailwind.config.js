@@ -7,6 +7,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./node_modules/tw-elements/dist/js/**/*.js",
   ],
+  daisyui: {
+    themes: false,
+  },
   theme: {
     extend: {
       colors: {
@@ -25,6 +28,7 @@ module.exports = {
   },
   plugins: [
     require("tw-elements/dist/plugin"),
+    require("daisyui"),
     function ({ addBase, theme }) {
       function extractColorVars(colorObj, colorGroup = "") {
         return Object.keys(colorObj).reduce((vars, colorKey) => {

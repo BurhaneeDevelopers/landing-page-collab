@@ -1,5 +1,6 @@
 import React from "react";
 import { HiLocationMarker } from "react-icons/hi";
+import { BiBuildingHouse } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 
@@ -11,7 +12,7 @@ const Navbar = () => {
         <div className="container flex flex-col sm:flex-row items-center justify-center p-3 gap-4 mx-auto text-gray-900 capitalize">
           <a
             href="#"
-            className="border-b-2 border-transparent transition-colors duration-300 transform hover:text-gray-600  flex"
+            className="border-b-2 border-transparent transition-colors duration-300 transform hover:text-gray-600 hidden sm:flex"
           >
             <HiLocationMarker className="my-auto mx-3 text-blue-600" /> Lorem,
             ipsum.
@@ -25,7 +26,7 @@ const Navbar = () => {
           </a>
           <a
             href="#"
-            className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform flex"
+            className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform hidden sm:flex"
           >
             <BsFillTelephoneFill className="my-auto mx-3 text-blue-600" />{" "}
             0987654321
@@ -34,7 +35,7 @@ const Navbar = () => {
       </nav>
       {/* ---- BOTTOM NAV---- */}
 
-      <header aria-label="Site Header" className="bg-white px-10">
+      <header aria-label="Site Header" className="bg-white px-10 sticky-top shadow-sm">
         <div className="xl:mx-auto max-w-screen-xl">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -102,12 +103,66 @@ const Navbar = () => {
               </a>
             </div>
             <div className="md:flex md:items-center md:gap-12">
+              <div className="md:hidden">
+                <label htmlFor="navbar" className="">
+                  <BiBuildingHouse className="text-xl" />
+                </label>
+              </div>
+              {/* ----NAVBAR-BODY---- */}
+              <input type="checkbox" id="navbar" className="modal-toggle" />
+              <label
+                htmlFor="navbar"
+                className="modal cursor-pointer backdrop-blur-lg"
+              >
+                <label className="modal-box relative" htmlFor="">
+                  <nav aria-label="Site Nav" className="flex justify-center">
+                    <ul className="flex flex-col items-center gap-10 text-sm">
+                      <li className="hover:border-b-2 hover:border-orange-700">
+                        <a
+                          className="text-gray-700 transition hover:text-gray-900 text-xl"
+                          href="#about"
+                        >
+                          About
+                        </a>
+                      </li>
+                      {/* <hr className="text-gray-900 z-10"/> */}
+                      <li className="hover:border-b-2 hover:border-orange-700">
+                        <a
+                          className="text-gray-700 transition hover:text-gray-900 text-xl"
+                          href="#services"
+                        >
+                          Services
+                        </a>
+                      </li>
+                      {/* <hr className="text-gray-900 z-10"/> */}
+                      <li className="hover:border-b-2 hover:border-orange-700">
+                        <a
+                          className="text-gray-700 transition hover:text-gray-900 text-xl"
+                          href="#gallery"
+                        >
+                          Gallery
+                        </a>
+                      </li>
+                      {/* <hr className="text-gray-900 z-10"/> */}
+                      <li className="hover:border-b-2 hover:border-orange-700">
+                        <a
+                          className="text-gray-700 transition hover:text-gray-900 text-xl"
+                          href="#contact"
+                        >
+                          Contact
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </label>
+              </label>
+              {/* ----NAVBAR-BODY---- */}
               <nav aria-label="Site Nav" className="hidden md:block">
                 <ul className="flex items-center gap-6 text-sm">
                   <li>
                     <a
                       className="text-gray-500 transition hover:text-gray-800 text-lg"
-                      href="#"
+                      href="#about"
                     >
                       About
                     </a>
@@ -116,7 +171,7 @@ const Navbar = () => {
                   <li>
                     <a
                       className="text-gray-500 transition hover:text-gray-800 text-lg"
-                      href="#"
+                      href="#services"
                     >
                       Services
                     </a>
@@ -125,7 +180,7 @@ const Navbar = () => {
                   <li>
                     <a
                       className="text-gray-500 transition hover:text-gray-800 text-lg"
-                      href="#"
+                      href="#gallery"
                     >
                       Gallery
                     </a>
@@ -134,7 +189,7 @@ const Navbar = () => {
                   <li>
                     <a
                       className="text-gray-500 transition hover:text-gray-800 text-lg"
-                      href="#"
+                      href="#contact"
                     >
                       Contact
                     </a>
