@@ -1,8 +1,20 @@
 import Head from "next/head";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
+import { useEffect } from "react";
+
+import AOS from "aos";
+
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-out-cubic",
+      offset: 400,
+    });
+  }, []);
+
   return (
     <div className="body">
       <Head>
@@ -12,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="mx-auto max-w-screen-2xl px-10">
-        <section className="text-gray-600 body-font w-full">
+        <section className="text-gray-600 body-font w-full" data-aos="fade-in">
           <div className="py-12 w-full flex flex-col m-0">
             <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center items-start justify-around space-y-4">
               <h1 className="text-3xl xl:text-6xl font-medium title-font text-gray-900">
@@ -26,7 +38,7 @@ export default function Home() {
               </p>
             </div>
             {/* ----Hero-Img---- */}
-            <div className="image relative mt-8">
+            <div className="image relative mt-8" data-aos="zoom-in">
               <div className="image_curve w-full h-96">
                 <img src="/heroImg.jpg" className="w-full object-cover" />
               </div>
@@ -35,7 +47,7 @@ export default function Home() {
           </div>
         </section>
         {/* ----Statistics---- */}
-        <section id="about">
+        <section id="about" data-aos="fade-in">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="flex flex-col justify-center text-center items-center md:items-start md:text-start">
               <h2 className="text-5xl md:text-6xl text-gray-900 font-bold">
@@ -78,11 +90,14 @@ export default function Home() {
         </section>
         {/* ----Statistics---- */}
         {/* ----SkillSets---- */}
-        <section className="" id="services">
+        <section id="services" data-aos="fade-in">
           <div className="mx-auto py-16">
             <div className="grid grid-cols-1 lg:h-screen max-h-[60rem] lg:grid-cols-2">
               <div className="relative z-10 lg:py-16">
-                <div className="relative h-64 sm:h-80 lg:h-full">
+                <div
+                  className="relative h-64 sm:h-80 lg:h-full"
+                  data-aos="zoom-in"
+                >
                   <img
                     alt="House"
                     src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
@@ -106,7 +121,7 @@ export default function Home() {
 
                   <a
                     href="#"
-                    className="mt-8 inline-block rounded border border-blue-600 bg-blue-600 py-2 px-6 text-md font-medium text-white hover:bg-transparent hover:text-blue-600 transition ease-out duration-300 focus:outline-none focus:ring active:text-blue-500"
+                    className="mt-8 inline-block rounded border border-blue-600 bg-blue-600 py-2 px-6 text-md font-medium text-white hover:bg-transparent hover:text-blue-600 transition ease duration-300 focus:outline-none focus:ring active:text-blue-500"
                   >
                     Contact Us
                   </a>
@@ -118,7 +133,7 @@ export default function Home() {
         {/* ----SkillSets---- */}
 
         {/* ----Projects---- */}
-        <section className="mb-24" id="gallery">
+        <section className="mb-24" id="gallery" data-aos="fade-in">
           <div className="flex my-10 flex-col text-center">
             <h2 className="text-5xl text-gray-900 font-bold">
               The last big project we worked on
@@ -130,107 +145,39 @@ export default function Home() {
             </div>
           </div>
           <div
-            id="carouselExampleCaptions"
-            className="carousel slide relative"
+            id="carouselExampleSlidesOnly"
+            class="carousel slide relative"
             data-bs-ride="carousel"
           >
-            <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="0"
-                className="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
-            <div className="carousel-inner relative w-full overflow-hidden">
-              <div className="carousel-item active relative float-left w-full">
-                <div className="absolute w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="carousel-inner relative w-full overflow-hidden">
+              <div class="carousel-item active relative float-left w-full">
                 <img
-                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
-                  className="block w-full"
-                  alt="..."
+                  src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+                  class="block w-full"
+                  alt="Wild Landscape"
                 />
-                <div className="carousel-caption hidden md:block absolute text-center">
-                  <h5 className="text-xl">First slide label</h5>
-                  <p>
-                    Some representative placeholder content for the first slide.
-                  </p>
-                </div>
               </div>
-              <div className="carousel-item relative float-left w-full">
-                <div className="absolute w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div class="carousel-item relative float-left w-full">
                 <img
-                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
-                  className="block w-full"
-                  alt="..."
+                  src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+                  class="block w-full"
+                  alt="Camera"
                 />
-                <div className="carousel-caption hidden md:block absolute text-center">
-                  <h5 className="text-xl">Second slide label</h5>
-                  <p>
-                    Some representative placeholder content for the second
-                    slide.
-                  </p>
-                </div>
               </div>
-              <div className="carousel-item relative float-left w-full">
-                <div className="absolute w-full h-full bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div class="carousel-item relative float-left w-full">
                 <img
-                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
-                  className="block w-full"
-                  alt="..."
+                  src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+                  class="block w-full"
+                  alt="Exotic Fruits"
                 />
-                <div className="carousel-caption hidden md:block absolute text-center">
-                  <h5 className="text-xl">Third slide label</h5>
-                  <p>
-                    Some representative placeholder content for the third slide.
-                  </p>
-                </div>
               </div>
             </div>
-            <button
-              className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon inline-block bg-no-repeat"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon inline-block bg-no-repeat"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
           </div>
         </section>
         {/* ----Projects---- */}
 
         {/* ----FAQ's---- */}
-        <section className="my-10 mb-24">
+        <section className="my-10 mb-24" data-aos="fade-in">
           <div className="flex my-10 flex-col text-center">
             <h2 className="text-5xl font-bold text-gray-900">
               Find the answers you need!
@@ -309,7 +256,7 @@ export default function Home() {
         {/* ----FAQ's---- */}
 
         {/* ----Contact---- */}
-        <section id="contact">
+        <section id="contact" data-aos="zoom-in">
           <div className="bg-gray-200 py-24 px-8 rounded-2xl mb-20 md:flex md:-mx-3 md:items-center md:justify-between">
             <h3 className="text-3xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-5xl md:w-1/3 lg:w-1/2 xl:w-1/3">
               Want to build a big building ?
